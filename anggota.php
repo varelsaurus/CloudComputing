@@ -191,7 +191,7 @@ $result = $conn->query($query);
             <?php while($row = $result->fetch_assoc()): ?>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card member-card h-100 text-center p-4">
-                        <img src="<?php echo htmlspecialchars($row['foto']); ?>" class="profile-img mx-auto mt-2" alt="Foto <?php echo htmlspecialchars($row['nama']); ?>" onerror="this.onerror=null; this.src='https://via.placeholder.com/150/0f172a/00C9FF?text=No+Photo';">
+                        <img src="<?php echo htmlspecialchars($row['foto']); ?>?v=<?php echo time(); ?>" class="profile-img mx-auto mt-2" alt="Foto <?php echo htmlspecialchars($row['nama']); ?>" onerror="this.onerror=null; this.src='https://via.placeholder.com/150/0f172a/00C9FF?text=No+Photo';">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo htmlspecialchars($row['nama']); ?></h5>
                             <h6 class="mb-3" style="color: #e2e8f0; font-weight: 500; font-size: 1.1rem;"><?php echo htmlspecialchars($row['nim']); ?></h6>
